@@ -19,7 +19,7 @@ public class ItemMidasTouchstone extends ItemWithCapacity {
 	public ItemMidasTouchstone(int par1) {
 		super(par1);
 		this.setUnlocalizedName(Names.TOUCHSTONE_NAME);
-		this.DEFAULT_TARGET_ITEM = new ItemStack(Item.lightStoneDust, 1, 0);
+		this.DEFAULT_TARGET_ITEM = new ItemStack(Item.glowstone, 1, 0);
 	}
 
 	@Override

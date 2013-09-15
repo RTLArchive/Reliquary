@@ -1,6 +1,6 @@
 package xreliquary.entities;
 
-import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityEnderPearl;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.util.DamageSource;
@@ -12,7 +12,7 @@ import net.minecraftforge.event.entity.living.EnderTeleportEvent;
 public class EntitySpecialEnderPearl extends EntityEnderPearl {
 	public boolean isArced = false;
 
-	public EntitySpecialEnderPearl(World par1World, EntityLiving par2EntityLiving, boolean b) {
+	public EntitySpecialEnderPearl(World par1World, EntityLivingBase par2EntityLiving, boolean b) {
 		super(par1World, par2EntityLiving);
 		this.setSize(0.01F, 0.01F);
 		this.isArced = b;

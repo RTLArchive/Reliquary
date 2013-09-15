@@ -2,6 +2,7 @@ package xreliquary.items;
 
 import java.util.List;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
@@ -64,12 +65,12 @@ public class ItemIceRod extends ItemWithCapacity {
 	}
 
 	@Override
-	public boolean hitEntity(ItemStack ist, EntityLiving struckEntity, EntityLiving strikingEntity) {
+	public boolean hitEntity(ItemStack ist, EntityLivingBase struckEntity, EntityLivingBase strikingEntity) {
 		// it costs a snowball, but striking with the ice rod will cause
 		// heavy slowdown and do decent damage vs. Fire immune
 		if (ist.getItemDamage() + 1 < ist.getMaxDamage()) {
 			if (struckEntity instanceof EntityLiving) {
-				EntityLiving e = struckEntity;
+				EntityLivingBase e = struckEntity;
 				e.addPotionEffect(new PotionEffect(Potion.moveSlowdown.id, 100, 2));
 			}
 			if (strikingEntity instanceof EntityPlayer) {

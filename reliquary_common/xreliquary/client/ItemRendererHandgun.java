@@ -50,3 +50,4 @@ public class ItemRendererHandgun implements IItemRenderer {
 		}
 	}
 }
+

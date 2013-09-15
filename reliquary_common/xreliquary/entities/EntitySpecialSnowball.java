@@ -4,6 +4,7 @@ import java.util.List;
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
@@ -27,8 +28,8 @@ public class EntitySpecialSnowball extends EntitySnowball {
 		super(par1World);
 	}
 
-	public EntitySpecialSnowball(World par1World, EntityLiving par2EntityLiving) {
-		super(par1World, par2EntityLiving);
+	public EntitySpecialSnowball(World par1World, EntityLivingBase par2EntityLivingBase) {
+		super(par1World, par2EntityLivingBase);
 		this.setSize(0.01F, 0.01F);
 	}
 
@@ -104,7 +105,7 @@ public class EntitySpecialSnowball extends EntitySnowball {
 		}
 		Vec3 var16 = worldObj.getWorldVec3Pool().getVecFromPool(posX, posY, posZ);
 		Vec3 var2 = worldObj.getWorldVec3Pool().getVecFromPool(posX + motionX, posY + motionY, posZ + motionZ);
-		MovingObjectPosition var3 = worldObj.rayTraceBlocks(var16, var2);
+		MovingObjectPosition var3 = worldObj.clip(var16, var2);
 		var16 = worldObj.getWorldVec3Pool().getVecFromPool(posX, posY, posZ);
 		var2 = worldObj.getWorldVec3Pool().getVecFromPool(posX + motionX, posY + motionY, posZ + motionZ);
 		if (var3 != null) {
@@ -114,7 +115,7 @@ public class EntitySpecialSnowball extends EntitySnowball {
 			Entity var4 = null;
 			List var5 = worldObj.getEntitiesWithinAABBExcludingEntity(this, boundingBox.addCoord(motionX, motionY, motionZ).expand(1.0D, 1.0D, 1.0D));
 			double var6 = 0.0D;
-			EntityLiving var8 = this.getThrower();
+			EntityLivingBase var8 = this.getThrower();
 			for (int var9 = 0; var9 < var5.size(); ++var9) {
 				Entity var10 = (Entity)var5.get(var9);
 				if (var10.canBeCollidedWith() && (var10 != var8 || ticksInAir >= 5)) {

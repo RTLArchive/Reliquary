@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.monster.EntityGhast;
 import net.minecraft.entity.monster.EntityPigZombie;
@@ -56,12 +57,13 @@ public class ItemMercyCross extends ItemSword {
 		par3List.add("it's so full of mercy.");
 	}
 
+
 	@Override
-	public int getDamageVsEntity(Entity par1Entity) {
+	public float getDamageVsEntity(Entity par1Entity, ItemStack par2ItemStack) {
 		if (isUndead(par1Entity)) {
 			par1Entity.worldObj.spawnParticle("largeexplode", par1Entity.posX, par1Entity.posY + par1Entity.height / 2, par1Entity.posZ, 0.0F, 0.0F, 0.0F);
 		}
-		return isUndead(par1Entity) ? super.getDamageVsEntity(par1Entity) * 2 : super.getDamageVsEntity(par1Entity) * 1;
+		return isUndead(par1Entity) ? super.getDamageVsEntity(par1Entity, par2ItemStack) * 2 : super.getDamageVsEntity(par1Entity, par2ItemStack) * 1;
 	}
 
 	private boolean isUndead(Entity mop) {
@@ -82,8 +84,8 @@ public class ItemMercyCross extends ItemSword {
 	 * entry argument beside ev. They just raise the damage on the stack.
 	 */
 	@Override
-	public boolean hitEntity(ItemStack par1ItemStack, EntityLiving par2EntityLiving, EntityLiving par3EntityLiving) {
-		par1ItemStack.damageItem(1, par3EntityLiving);
+	public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase, EntityLivingBase par3EntityLivingBase) {
+		par1ItemStack.damageItem(1, par3EntityLivingBase);
 		return true;
 	}
 }

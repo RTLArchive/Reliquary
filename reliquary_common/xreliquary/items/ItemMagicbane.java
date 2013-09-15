@@ -5,6 +5,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.EnumToolMaterial;
@@ -54,11 +55,11 @@ public class ItemMagicbane extends ItemSword {
 	public boolean hasEffect(ItemStack stack) {
 		return true;
 	}
-
-	@Override
-	public int getDamageVsEntity(Entity par2EntityLiving) {
-		return super.getDamageVsEntity(par2EntityLiving);
-	}
+// why override, then return the super?
+//	@Override
+//	public int getDamageVsEntity(Entity par2EntityLiving) {
+//		return super.getDamageVsEntity(par2EntityLiving);
+//	}
 
 	/**
 	 * Returns the strength of the stack against a given block. 1.0F base,
@@ -74,9 +75,9 @@ public class ItemMagicbane extends ItemSword {
 	 * entry argument beside ev. They just raise the damage on the stack.
 	 */
 	@Override
-	public boolean hitEntity(ItemStack par1ItemStack, EntityLiving par2EntityLiving, EntityLiving par3EntityLiving) {
-		if (par2EntityLiving instanceof EntityLiving) {
-			EntityLiving e = par2EntityLiving;
+	public boolean hitEntity(ItemStack par1ItemStack, EntityLivingBase par2EntityLivingBase, EntityLivingBase par3EntityLivingBase) {
+		if (par2EntityLivingBase instanceof EntityLivingBase) {
+			EntityLivingBase e = par2EntityLivingBase;
 			int random = e.worldObj.rand.nextInt(32);
 			switch (random) {
 				case 0:
@@ -115,7 +116,7 @@ public class ItemMagicbane extends ItemSword {
 					break;
 			}
 		}
-		if (par3EntityLiving instanceof EntityPlayer) {
+		if (par3EntityLivingBase instanceof EntityPlayer) {
 			NBTTagList enchants = par1ItemStack.getEnchantmentTagList();
 			int bonus = 0;
 			if (enchants != null) {
@@ -123,9 +124,9 @@ public class ItemMagicbane extends ItemSword {
 					bonus += ((NBTTagCompound)enchants.tagAt(enchant)).getShort("lvl");
 				}
 			}
-			par2EntityLiving.attackEntityFrom(DamageSource.causePlayerDamage((EntityPlayer)par3EntityLiving), bonus + 4);
+			par2EntityLivingBase.attackEntityFrom(DamageSource.causePlayerDamage((EntityPlayer)par3EntityLivingBase), bonus + 4);
 		}
-		par1ItemStack.damageItem(1, par3EntityLiving);
+		par1ItemStack.damageItem(1, par3EntityLivingBase);
 		return true;
 	}
 }

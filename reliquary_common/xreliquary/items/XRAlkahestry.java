@@ -39,7 +39,7 @@ public class XRAlkahestry {
 		addReverseRecipe(Item.gunpowder);
 		addReverseRecipe(Item.flint);
 		addReverseRecipe(Item.dyePowder, 4);
-		addReverseRecipe(Item.lightStoneDust);
+		addReverseRecipe(Item.glowstone);
 		addReverseRecipe(Item.netherStalkSeeds);
 		addReverseRecipe(Item.pumpkinSeeds);
 		addReverseRecipe(Item.melonSeeds);
@@ -93,7 +93,7 @@ public class XRAlkahestry {
 		addAlkahestry(Item.ingotIron, 0, 1, 'l', 4);
 		addAlkahestry(Item.gunpowder, 0, 1, 'r', 4);
 		addAlkahestry(Item.flint, 0, 8, 'r', 1);
-		addAlkahestry(Item.lightStoneDust, 0, 1, 'r', 1);
+		addAlkahestry(Item.glowstone, 0, 1, 'r', 1);
 		addAlkahestry(Item.dyePowder, 4, 1, 'r', 4);
 		addAlkahestry(Item.emerald, 0, 1, 'b', 1);
 		GameRegistry.addRecipe(new ItemStack(Block.dragonEgg, 1), new Object[] { "ddd", "dtd", "ddd", 'd', Block.blockDiamond, 't', XRItems.alkahestryTome });

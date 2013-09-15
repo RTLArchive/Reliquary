@@ -206,21 +206,21 @@ public class XRItems {
 		// empty vial
 		GameRegistry.addRecipe(potion(5, PotionData.EMPTY_VIAL_META), new Object[] { "g g", "g g", " g ", 'g', Block.thinGlass });
 		// base solvent
-		GameRegistry.addShapelessRecipe(potion(PotionData.POTION_META), new Object[] { Item.netherStalkSeeds, Item.redstone, Item.lightStoneDust, potion(PotionData.WATER_META) });
+		GameRegistry.addShapelessRecipe(potion(PotionData.POTION_META), new Object[] { Item.netherStalkSeeds, Item.redstone, Item.glowstone, potion(PotionData.WATER_META) });
 		// base splash solvent
-		GameRegistry.addShapelessRecipe(potion(PotionData.SPLASH_META), new Object[] { Item.netherStalkSeeds, Item.gunpowder, Item.lightStoneDust, potion(PotionData.WATER_META) });
+		GameRegistry.addShapelessRecipe(potion(PotionData.SPLASH_META), new Object[] { Item.netherStalkSeeds, Item.gunpowder, Item.glowstone, potion(PotionData.WATER_META) });
 		// glowing water
-		GameRegistry.addShapelessRecipe(new ItemStack(glowingWater, 1), new Object[] { potion(PotionData.SPLASH_META), Item.lightStoneDust, Item.lightStoneDust, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(new ItemStack(glowingWater, 1), new Object[] { potion(PotionData.SPLASH_META), Item.glowstone, Item.glowstone, Item.glowstone });
 		// speed potion
-		GameRegistry.addShapelessRecipe(potion(PotionData.SPEED_META), new Object[] { potion(PotionData.POTION_META), Item.sugar, Item.redstone, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.SPEED_META), new Object[] { potion(PotionData.POTION_META), Item.sugar, Item.redstone, Item.glowstone });
 		// dig potion
-		GameRegistry.addShapelessRecipe(potion(PotionData.DIGGING_META), new Object[] { potion(PotionData.POTION_META), Item.bone, Item.redstone, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.DIGGING_META), new Object[] { potion(PotionData.POTION_META), Item.bone, Item.redstone, Item.glowstone });
 		// strength potion
-		GameRegistry.addShapelessRecipe(potion(PotionData.STRENGTH_META), new Object[] { potion(PotionData.POTION_META), Item.blazePowder, Item.redstone, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.STRENGTH_META), new Object[] { potion(PotionData.POTION_META), Item.blazePowder, Item.redstone, Item.glowstone });
 		// heal potion
-		GameRegistry.addShapelessRecipe(potion(PotionData.HEALING_META), new Object[] { potion(PotionData.POTION_META), Item.speckledMelon, Item.lightStoneDust, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.HEALING_META), new Object[] { potion(PotionData.POTION_META), Item.speckledMelon, Item.glowstone, Item.glowstone });
 		// jump potion
-		GameRegistry.addShapelessRecipe(potion(PotionData.BOUNDING_META), new Object[] { potion(PotionData.POTION_META), Item.feather, Item.redstone, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.BOUNDING_META), new Object[] { potion(PotionData.POTION_META), Item.feather, Item.redstone, Item.glowstone });
 		// regen potion
 		GameRegistry.addShapelessRecipe(potion(PotionData.REGENERATION_META), new Object[] { potion(PotionData.POTION_META), Item.ghastTear, Item.redstone, Item.redstone });
 		// resist potion
@@ -234,11 +234,11 @@ public class XRItems {
 		// vision potion
 		GameRegistry.addShapelessRecipe(potion(PotionData.INFRAVISION_META), new Object[] { potion(PotionData.POTION_META), Item.goldenCarrot, Item.redstone, Item.redstone });
 		// protection potion
-		GameRegistry.addShapelessRecipe(potion(8, PotionData.PROTECTION_META), new Object[] { potion(PotionData.FIRE_WARDING_META), potion(PotionData.FIRE_WARDING_META), potion(PotionData.FIRE_WARDING_META), potion(PotionData.FIRE_WARDING_META), Item.lightStoneDust, potion(PotionData.RESISTANCE_META), potion(PotionData.RESISTANCE_META), potion(PotionData.RESISTANCE_META), potion(PotionData.RESISTANCE_META) });
+		GameRegistry.addShapelessRecipe(potion(8, PotionData.PROTECTION_META), new Object[] { potion(PotionData.FIRE_WARDING_META), potion(PotionData.FIRE_WARDING_META), potion(PotionData.FIRE_WARDING_META), potion(PotionData.FIRE_WARDING_META), Item.glowstone, potion(PotionData.RESISTANCE_META), potion(PotionData.RESISTANCE_META), potion(PotionData.RESISTANCE_META), potion(PotionData.RESISTANCE_META) });
 		// potence potion
-		GameRegistry.addShapelessRecipe(potion(8, PotionData.POTENCE_META), new Object[] { potion(PotionData.STRENGTH_META), potion(PotionData.STRENGTH_META), potion(PotionData.STRENGTH_META), potion(PotionData.STRENGTH_META), Item.lightStoneDust, potion(PotionData.BOUNDING_META), potion(PotionData.BOUNDING_META), potion(PotionData.BOUNDING_META), potion(PotionData.BOUNDING_META) });
+		GameRegistry.addShapelessRecipe(potion(8, PotionData.POTENCE_META), new Object[] { potion(PotionData.STRENGTH_META), potion(PotionData.STRENGTH_META), potion(PotionData.STRENGTH_META), potion(PotionData.STRENGTH_META), Item.glowstone, potion(PotionData.BOUNDING_META), potion(PotionData.BOUNDING_META), potion(PotionData.BOUNDING_META), potion(PotionData.BOUNDING_META) });
 		// celerity potion
-		GameRegistry.addShapelessRecipe(potion(8, PotionData.CELERITY_META), new Object[] { potion(PotionData.DIGGING_META), potion(PotionData.DIGGING_META), potion(PotionData.DIGGING_META), potion(PotionData.DIGGING_META), Item.lightStoneDust, potion(PotionData.SPEED_META), potion(PotionData.SPEED_META), potion(PotionData.SPEED_META), potion(PotionData.SPEED_META) });
+		GameRegistry.addShapelessRecipe(potion(8, PotionData.CELERITY_META), new Object[] { potion(PotionData.DIGGING_META), potion(PotionData.DIGGING_META), potion(PotionData.DIGGING_META), potion(PotionData.DIGGING_META), Item.glowstone, potion(PotionData.SPEED_META), potion(PotionData.SPEED_META), potion(PotionData.SPEED_META), potion(PotionData.SPEED_META) });
 		// panacea potion
 		GameRegistry.addShapelessRecipe(potion(8, PotionData.PANACEA_META), new Object[] { potion(PotionData.HEALING_META), potion(PotionData.HEALING_META), potion(PotionData.HEALING_META), potion(PotionData.HEALING_META), Item.bucketMilk, potion(PotionData.REGENERATION_META), potion(PotionData.REGENERATION_META), potion(PotionData.REGENERATION_META), potion(PotionData.REGENERATION_META) });
 		// aphrodite
@@ -246,19 +246,19 @@ public class XRItems {
 		// poison
 		GameRegistry.addShapelessRecipe(potion(PotionData.POISON_META), new Object[] { potion(PotionData.SPLASH_META), Item.spiderEye, Item.fermentedSpiderEye, Item.redstone });
 		// harm
-		GameRegistry.addShapelessRecipe(potion(PotionData.ACID_META), new Object[] { potion(PotionData.SPLASH_META), Item.speckledMelon, Item.fermentedSpiderEye, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.ACID_META), new Object[] { potion(PotionData.SPLASH_META), Item.speckledMelon, Item.fermentedSpiderEye, Item.glowstone });
 		// confusion
 		GameRegistry.addShapelessRecipe(potion(PotionData.CONFUSION_META), new Object[] { potion(PotionData.SPLASH_META), Item.goldenCarrot, Item.fermentedSpiderEye, Item.redstone });
 		// slowness
-		GameRegistry.addShapelessRecipe(potion(PotionData.SLOWING_META), new Object[] { potion(PotionData.SPLASH_META), Item.sugar, Item.fermentedSpiderEye, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.SLOWING_META), new Object[] { potion(PotionData.SPLASH_META), Item.sugar, Item.fermentedSpiderEye, Item.glowstone });
 		// weakness
-		GameRegistry.addShapelessRecipe(potion(PotionData.WEAKNESS_META), new Object[] { potion(PotionData.SPLASH_META), Item.blazePowder, Item.fermentedSpiderEye, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.WEAKNESS_META), new Object[] { potion(PotionData.SPLASH_META), Item.blazePowder, Item.fermentedSpiderEye, Item.glowstone });
 		// wither
-		GameRegistry.addShapelessRecipe(potion(PotionData.WITHER_META), new Object[] { potion(PotionData.SPLASH_META), new ItemStack(Item.skull, 1, 1), Item.lightStoneDust, Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(PotionData.WITHER_META), new Object[] { potion(PotionData.SPLASH_META), new ItemStack(Item.skull, 1, 1), Item.glowstone, Item.glowstone });
 		// blindness
 		GameRegistry.addShapelessRecipe(potion(PotionData.BLINDING_META), new Object[] { potion(PotionData.SPLASH_META), Item.goldenCarrot, Item.fermentedSpiderEye, Item.goldenCarrot });
 		// ruin
-		GameRegistry.addShapelessRecipe(potion(3, PotionData.RUINATION_META), new Object[] { potion(PotionData.SLOWING_META), potion(PotionData.WEAKNESS_META), potion(PotionData.POISON_META), Item.lightStoneDust });
+		GameRegistry.addShapelessRecipe(potion(3, PotionData.RUINATION_META), new Object[] { potion(PotionData.SLOWING_META), potion(PotionData.WEAKNESS_META), potion(PotionData.POISON_META), Item.glowstone });
 		// fertility
 		GameRegistry.addShapelessRecipe(potion(PotionData.FERTILIZER_META), new Object[] { potion(PotionData.SPLASH_META), new ItemStack(Item.dyePowder, 1, 15), new ItemStack(Item.dyePowder, 1, 15), new ItemStack(Item.dyePowder, 1, 15) });
 		GameRegistry.registerCraftingHandler(new WaterHandler());

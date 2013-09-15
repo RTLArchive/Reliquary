@@ -153,6 +153,7 @@ public class ItemWraithEye extends ItemSalamanderEye {
 	}
 
 	public String getWorld(EntityPlayer player) {
-		return Integer.valueOf(player.worldObj.getWorldInfo().getDimension()).toString();
+		return Integer.valueOf(player.worldObj.provider.dimensionId).toString();
+		
 	}
 }
